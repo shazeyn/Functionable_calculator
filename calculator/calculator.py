@@ -15,37 +15,69 @@ else:
 
 
 
-print("-----------------------------------------------------------")
-#select your operator here-->
+print("""
+===========================================================
+                PYTHON CALCULATOR
+===========================================================
 
-print('''
-      Select an operator:
-+ : Addition
-- : Subtraction
-* : Multiplication
-/ : Division
-      
-      ''')
+Select an operator:
 
-print("-----------------------------------------------------------")
++   : Addition
+-   : Subtraction
+*   : Multiplication
+/   : Division
+**  : Power
+%   : Modulus
+//  : Floor Division
 
-operator = input("Which operator you have selected? :").lower()
+-----------------------------------------------------------
+EXAMPLES
+-----------------------------------------------------------
 
-addition = num_1 + num_2 if operator == "+" or operator == "addition" or operator == "add" else "Please enter a correct form like '+', '-', '*', '/'"
+Addition:
+2 + 3 = 5
 
-print(f"This is your final answer : {addition}")
+Subtraction:
+10 - 5 = 5
 
-subtraction = num_1 - num_2 if operator == "-" or operator == "subtraction" or operator == "sub" else "Please enter a correct form like '+', '-', '*', '/'"
+Multiplication:
+4 * 5 = 20
 
-print(f"This is your final answer : {subtraction}")
+Division:
+10 / 2 = 5
 
-multiplication = num_1 * num_2 if operator == "*" or operator == "multiplication" or operator == "multiply" else "Please enter a correct form like '+', '-', '*', '/'"
+Power:
+2 ** 3 = 8
 
-print(f"This is your final answer : {multiplication}")
+Modulus:
+10 % 3 = 1
 
-division = round(num_1 / num_2, 2) if operator == "/" or operator == "division" or operator == "divide" else "Please enter a correct form like '+', '-', '*', '/'"
+Floor Division:
+10 // 3 = 3
 
-print(f"This is your final answer : {division}")
+===========================================================
+""")
+
+
+operator = input("Which operator you have selected? :").lower().strip()
+
+if operator == "+" or operator == "add" or operator == "addition":
+    final_answer = num_1 + num_2
+    print(f"here is your final answer : {final_answer}")
+elif operator == "-" or operator == "sub" or operator == "subtraction" or operator == "subtract":
+    final_answer = num_1 - num_2
+    print(f"here is your final answer : {final_answer}")
+elif operator == "*" or operator == "multiply" or operator == "multiplication" or operator == "multi":
+    final_answer = num_1 * num_2
+    print(f"here is your final answer : {final_answer}")
+elif operator == "/" or operator == "divi" or operator == "devision" or operator == "divide":
+    final_answer = round(num_1 / num_2, 2)
+    print(f"here is your final answer : {final_answer}")
+elif operator == "**" or operator == "power" or operator == "pow" or operator == "pow calculation":
+    final_answer = (num_1 / num_2,)
+    print(f"here is your final answer : {final_answer}")
+else:
+    print(f"Please enter a valid operator ❌{operator}")
 
 
 print("===================================")
