@@ -74,7 +74,7 @@ elif operator == "/" or operator == "divi" or operator == "devision" or operator
     final_answer = round(num_1 / num_2, 2)
     print(f"here is your final answer : {final_answer}")
 elif operator == "**" or operator == "power" or operator == "pow" or operator == "pow calculation":
-    final_answer = (num_1 / num_2,)
+    final_answer = num_1 ** num_2
     print(f"here is your final answer : {final_answer}")
 else:
     print(f"Please enter a valid operator ❌{operator}")
@@ -82,5 +82,5 @@ else:
 
 print("===================================")
 print("Thank you for trying this calculator 😊")
-print("Made with Python by Mohammed Shazeyn 💻")
+print("Made with Python by Mohammed Shazeyn ")
 print("===================================")
